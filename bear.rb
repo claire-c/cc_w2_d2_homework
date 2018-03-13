@@ -12,4 +12,19 @@ class Bear
     @stomach << fish
   end
 
+  def is_starving
+    @stomach.empty?
+  end
+
+  # def hunt_for_fish(river)
+  #   if river.fish_count == 0
+  #     return false
+  #   end
+  #
+  # end
+
+  def digest()
+    @stomach.clear
+  end
+
 end

@@ -24,6 +24,14 @@ class RiverTest < MiniTest::Test
     assert_equal(@all_the_fish, @river1.fish_in_river)
   end
 
+  def test_fish_count__river_empty()
+    empty_river = River.new("Polluted", [])
+    assert_equal(0, empty_river.fish_count() )
+  end
+
+  def test_fish_count__river_has_fish()
+    assert_equal(3, @river1.fish_count())
+  end
 
 
 end

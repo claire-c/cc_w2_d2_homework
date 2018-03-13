@@ -8,7 +8,9 @@ def initialize(name, fish_in_river)
   @fish_in_river = fish_in_river
 end
 
-
+def fish_count()
+  @fish_in_river.count()
+end
 
 
 
