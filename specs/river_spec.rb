@@ -42,9 +42,6 @@ class RiverTest < MiniTest::Test
     assert_equal("Trout", result.species)
   end
 
-  # A river has a method a_fish_is_born( String ) which will take a String which will become newborn fish's name
-  #I want to create a new instance of fish. Can I do that in the River class? Let's find out.
 
-  #I'm not sure if you want a brand new species, or another fish of the same species? Does it matter?
 
 end
