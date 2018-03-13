@@ -33,5 +33,18 @@ class RiverTest < MiniTest::Test
     assert_equal(3, @river1.fish_count())
   end
 
+  def test_a_fish_is_born()
+    result = @river1.a_fish_is_born("Haddock")
+    assert_equal("Haddock", result.species)
+    result = @river2.a_fish_is_born("Salmon")
+    assert_equal("Salmon", result.species)
+    result = @river3.a_fish_is_born("Trout")
+    assert_equal("Trout", result.species)
+  end
+
+  # A river has a method a_fish_is_born( String ) which will take a String which will become newborn fish's name
+  #I want to create a new instance of fish. Can I do that in the River class? Let's find out.
+
+  #I'm not sure if you want a brand new species, or another fish of the same species? Does it matter?
 
 end

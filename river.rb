@@ -13,7 +13,9 @@ def fish_count()
 end
 
 
-
+def a_fish_is_born(new_fish)
+  newborn_fish = Fish.new(new_fish)
+end
 
 
 end

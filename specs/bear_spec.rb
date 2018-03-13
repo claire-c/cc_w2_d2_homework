@@ -43,17 +43,27 @@ class BearTest < MiniTest::Test
     assert_equal(false, full_bear.empty?)
   end
 
-  # def eat_fish_from_river__no_fish()
-  #   @bear1.hunt_for_fish(@river)
-  #   result = @bear1
-  #   #full_bear = @bear1.eat_a_fish(@fish1)
-  #   assert_equal(true, result )#full_bear.empty?)
-  # end
+  def test_eat_fish_from_river__no_fish()
+    @bear1.hunt_for_fish(@river)
+    result = @bear1
+    #full_bear = @bear1.eat_a_fish(@fish1)
+    assert_equal(true, result )#full_bear.empty?)
+  end
+
+  def test_eat_fish_from_river__fish()
+
+  end
 # A bear should be able to eat a fish from the river. Bear will have a function hunt_for_fish( River ) which takes a River pbject as an argument. Inside it will check if there is any fish in the river, take the first fish and bear will eat that fish
 
-  def test_digest()
+  def test_digest__bear_stomach_full()
     full_bear = Bear.new("Fatty", [@fish1, @fish2])
     assert_equal([], full_bear.digest)
+  end
+
+#I tried to call the eat_a_fish method on a bear object, but digest does not work for what is returned from eat_a_fish (an array), so I've had to add in a second argument to my bear object.
+
+  def test_digest__bear_stomach_empty()
+    assert_equal([], @bear1.digest)
   end
 
 end
