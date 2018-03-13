@@ -6,10 +6,10 @@ require_relative('../river.rb')
 class BearTest < MiniTest::Test
 
   def setup
-    @bear1 = Bear.new("Yogi")#, [])
-    @bear2 = Bear.new("Grizzly")#, [])
-    @bear3 = Bear.new("Carebear")#, [])
-
+    @bear1 = Bear.new("Yogi", [])
+    @bear2 = Bear.new("Grizzly", [])
+    @bear3 = Bear.new("Carebear", [])
+#I am not convinced about adding in an array for the stomach as an argument. Do I need to do this?
     @fish1 = Fish.new("Trout")
     @fish2 = Fish.new("Salmon")
     @fish3 = Fish.new("Sturgeon")
@@ -52,9 +52,8 @@ class BearTest < MiniTest::Test
 # A bear should be able to eat a fish from the river. Bear will have a function hunt_for_fish( River ) which takes a River pbject as an argument. Inside it will check if there is any fish in the river, take the first fish and bear will eat that fish
 
   def test_digest()
-    full_bear = @bear1.eat_a_fish(@fish1)
-    #I am returning an array, and digest doesn't work on that. It only works on bear.
-    assert_equal([], @bear1.digest)
+    full_bear = Bear.new("Fatty", [@fish1, @fish2])
+    assert_equal([], full_bear.digest)
   end
 
 end
