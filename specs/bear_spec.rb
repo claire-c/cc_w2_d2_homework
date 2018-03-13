@@ -26,8 +26,12 @@ class BearTest < MiniTest::Test
   end
 
   def test_eat_a_fish()
-    result = @bear1.eat_a_fish(@fish1)
-    assert_equal([@fish1], result)
+    result1 = @bear1.eat_a_fish(@fish1)
+    assert_equal([@fish1], result1)
+    result2 = @bear1.eat_a_fish(@fish2)
+    assert_equal([@fish1, @fish2], result2)
+    result3 = @bear2.eat_a_fish(@fish3)
+    assert_equal([@fish3], result3)
   end
 
 
