@@ -67,6 +67,18 @@ class BearTest < MiniTest::Test
     assert_equal([], @bear3.digest)
   end
 
+  def test_fish_in_stomach__empty()
+    assert_equal(0, @bear1.fish_in_stomach)
+  end
 
+  def test_fish_in_stomach__full()
+    assert_equal(3, @bear3.fish_in_stomach)
+  end
+
+  # def test_hunt_for_many_fish()
+  #   @bear1.hunt_for_many_fish(@river, @river.fish_count)
+  #   assert_equal(3, @bear1.fish_in_stomach)
+  #   assert_equal(0, @river.fish_count)
+  # end
 
 end
