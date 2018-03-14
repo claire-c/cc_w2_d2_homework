@@ -20,6 +20,7 @@ class Bear
     if river.fish_count != 0
       for fish in river.fish_in_river
         @stomach << fish
+        river.remove_a_fish
         break
       end
     end
